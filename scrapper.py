@@ -4,7 +4,7 @@ from playwright.sync_api import sync_playwright
 
 def scrape_linkedin(query, num_posts=10):
     with sync_playwright() as p:
-        browser = p.chromium.launch(headless=False)  # Set to False to see the browser
+        browser = p.chromium.launch(headless=True)  # Set to False to see the browser
         page = browser.new_page()
         page.set_viewport_size({"width": 1280, "height": 720})
 
